@@ -52,10 +52,7 @@
 		class="-translate-y-4 animate-fade-in gap-x-2 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms] dark:text-black"
 	>
 		<Download class="h-4 w-4" />
-		<span>Unduh</span>
-		<ArrowRightIcon
-			class="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
-		/>
+		<span>Unduh BeresIn V2.0.0</span>
 	</Button>
 	<div
 		use:inview={{
