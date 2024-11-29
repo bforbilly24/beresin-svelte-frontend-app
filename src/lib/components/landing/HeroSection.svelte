@@ -51,7 +51,7 @@
 	<Button
 		class="-translate-y-4 animate-fade-in gap-x-2 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms] dark:text-black"
 	>
-		<Download class='w-4 h-4' />
+		<Download class="h-4 w-4" />
 		<span>Unduh</span>
 		<ArrowRightIcon
 			class="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
@@ -63,13 +63,16 @@
 			rootMargin: '-100px'
 		}}
 		on:inview_change={handleChange}
-		class="relative mt-32 animate-fade-up opacity-0 [--animation-delay:400ms] [perspective:2000px]"
+		class="relative mt-32 animate-fade-up rounded-xl bg-opacity-[0.01] opacity-0 [--animation-delay:400ms] [perspective:2000px] before:absolute before:bottom-0 before:left-0 before:top-0 before:size-full before:h-[50%] before:w-full before:opacity-0 before:[background-image:linear-gradient(to_bottom,var(--color-one),var(--color-one),transparent_10%)] before:[filter:blur(180px)] after:absolute after:bottom-0 after:left-0 after:z-0 after:h-[100%] after:w-full after:[background:linear-gradient(to_top,hsl(var(--background))_20%,transparent)] dark:border-gray-100/20 {inView
+			? 'before:animate-image-glow'
+			: ''}"
 	>
-		<div
+		<!-- <div
 			class="rounded-xl border-2 border-gray-600/20 dark:border-gray-100/20 bg-white bg-opacity-[0.01] before:absolute before:bottom-0 before:left-0 before:top-0 before:size-full before:h-[80%] before:w-full before:opacity-0 before:[background-image:linear-gradient(to_bottom,var(--color-one),var(--color-one),transparent_40%)] before:[filter:blur(180px)] after:absolute after:bottom-0 after:left-0 after:z-0 after:h-[45%] after:w-full after:[background:linear-gradient(to_top,hsl(var(--background))_20%,transparent)] {inView
 				? 'before:animate-image-glow'
 				: ''}"
-		>
+		> -->
+		<div class="">
 			<BorderBeam
 				size={200}
 				duration={12}
@@ -78,12 +81,13 @@
 				colorTo="var(--color-two)"
 			/>
 
-			<HeroVideoDialog
+			<img alt="thumbnail-beresin" src={banner} class="rounded-xl h-full w-full" />
+			<!-- <HeroVideoDialog
 				animationStyle="from-center"
 				videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
 				thumbnailSrc={banner}
 				thumbnailAlt="Hero Video"
-			/>
+			/> -->
 		</div>
 	</div>
 </section>
