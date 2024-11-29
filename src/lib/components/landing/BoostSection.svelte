@@ -108,7 +108,7 @@
 			{#each productBoosts as boost, index}
 				<MagicCard
 					class={cn(
-						'group cursor-pointer flex-col items-center justify-center whitespace-nowrap border text-4xl shadow-2xl transition-all duration-300 hover:border-gray-200',
+						'group cursor-pointer flex-col items-center justify-center whitespace-nowrap border text-4xl shadow-2xl transition-all duration-300 hover:border-gray-600 dark:hover:border-gray-200',
 						{
 							'border-2 border-gray-600 transition-all duration-500 dark:border-gray-200':
 								boost.isMostPopular
