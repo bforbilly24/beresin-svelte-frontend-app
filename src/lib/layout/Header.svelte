@@ -6,16 +6,22 @@
 	import Moon from 'lucide-svelte/icons/moon';
 	import { Button } from '$lib/components/ui/button/index';
 
-	const darkMode = writable(false);
+	const darkMode = writable(true);
 
 	onMount(() => {
+		// Check if a theme is saved in localStorage, if not, default to dark
 		const storedTheme = localStorage.getItem('theme');
 		if (storedTheme === 'dark') {
 			darkMode.set(true);
 			document.documentElement.classList.add('dark');
-		} else {
+		} else if (storedTheme === 'light') {
 			darkMode.set(false);
 			document.documentElement.classList.remove('dark');
+		} else {
+			// Default to dark theme if nothing is stored
+			darkMode.set(true);
+			document.documentElement.classList.add('dark');
+			localStorage.setItem('theme', 'dark');
 		}
 	});
 
@@ -51,7 +57,7 @@
 	class="fixed left-0 top-0 z-50 w-full -translate-y-4 animate-fade-in border-b opacity-0 backdrop-blur-md"
 >
 	<div
-		class="container flex h-10 items-center lg:h-20 {innerWidth < 768
+		class="container flex h-20 items-center lg:h-20 {innerWidth < 768
 			? 'justify-center'
 			: 'justify-between'}"
 	>
