@@ -9,11 +9,14 @@
 	import { inview } from 'svelte-inview';
 	import banner from '$lib/imgs/banner.png';
 
-	// Images
 	let inView = false;
 	const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
-		// console.log(detail);
 		inView = detail.inView;
+	};
+
+	const downloadFile = () => {
+		window.location.href =
+			'https://drive.google.com/file/d/1vyedI0xFNQo_T5jkeQxX7LalJVLPIbHC/view?usp=drive_link';
 	};
 </script>
 
@@ -50,6 +53,7 @@
 	</p>
 	<Button
 		class="-translate-y-4 animate-fade-in gap-x-2 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms] dark:text-black"
+		on:click={downloadFile}
 	>
 		<Download class="h-4 w-4" />
 		<span>Unduh BeresIn V2.0.0</span>
@@ -78,7 +82,7 @@
 				colorTo="var(--color-two)"
 			/>
 
-			<img alt="thumbnail-beresin" src={banner} class="rounded-xl h-full w-full" />
+			<img alt="thumbnail-beresin" src={banner} class="h-full w-full rounded-xl" />
 			<!-- <HeroVideoDialog
 				animationStyle="from-center"
 				videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
