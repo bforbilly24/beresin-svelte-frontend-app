@@ -4,7 +4,6 @@
 	import BorderBeam from '$lib/components/magic/borderbeam/BorderBeam.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Spotlight from '../magic/Spotlight/Spotlight.svelte';
-	import HeroVideoDialog from '../magic/HeroVideoDialog/HeroVideoDialog.svelte';
 	import type { ObserverEventDetails } from 'svelte-inview';
 	import { inview } from 'svelte-inview';
 	import banner from '$lib/imgs/banner.png';
@@ -16,7 +15,7 @@
 
 	const downloadFile = () => {
 		window.location.href =
-			'https://drive.google.com/file/d/1vyedI0xFNQo_T5jkeQxX7LalJVLPIbHC/view?usp=drive_link';
+			'https://drive.google.com/file/d/1CNOlAKw9T1UKK_5x0Gy6iN-WKblyXV1W/view?usp=sharing';
 	};
 </script>
 
